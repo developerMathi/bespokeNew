@@ -20,12 +20,14 @@ namespace BespokeMobile.Popups
         private bool v;
         private CancelReservationMobileRequest cancelReservationMobileRequest;
         private string token;
+        private int v1;
 
         public Error_popup(string content)
         {
             InitializeComponent();
             contentText.Text = content;
             v = false;
+            v1 = 0;
         }
 
         public Error_popup(string content, bool v)
@@ -45,11 +47,27 @@ namespace BespokeMobile.Popups
             canReserGrid.IsVisible = true;
         }
 
+        public Error_popup(string content, int v1)
+        {
+            InitializeComponent();
+            contentText.Text = content;
+            v = false;
+            this.v1 = v1;
+        }
+
         private void Okbtn_Clicked(object sender, EventArgs e)
         {
             if (v)
             {
                 Navigation.PushAsync(new HomePage());
+            }
+            else if (v1 == 1)
+            {
+                Navigation.PushAsync(new VehicleDetailPage());
+            }
+            else if (v1 == 2)
+            {
+                PopupNavigation.Instance.PopAllAsync();
             }
             else
             {
@@ -80,11 +98,11 @@ namespace BespokeMobile.Popups
                 finally
                 {
                     busy = false;
-                    
+
 
                     if (response.ReservationNumber != null)
                     {
-                        MessagingCenter.Send(this,"reservationCancelled");
+                        MessagingCenter.Send(this, "reservationCancelled");
                         await Navigation.PushAsync(new HomePage());
 
                     }

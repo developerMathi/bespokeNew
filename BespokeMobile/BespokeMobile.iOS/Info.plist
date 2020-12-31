@@ -20,12 +20,10 @@
 	</array>
 	<key>MinimumOSVersion</key>
 	<string>9.0</string>
-	<key>CFBundleDisplayName</key>
-	<string>JAX_Mobile</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.Navotar.JaxAutomative</string>
+	<string>com.Navotar.Bespoke</string>
 	<key>CFBundleVersion</key>
-	<string>1.0C:\Users\Alexander\Documents\JaxLast\BespokeMobile\BespokeMobile.iOS\Info.plist</string>
+	<string>/Users/navotar/Projects/JaxMobileApplicationDevelopment/Bespoke/BespokeMobile/BespokeMobile.iOS/Info.plist</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>CFBundleName</key>
@@ -77,6 +75,8 @@
 		</dict>
 		<key>NSAllowsArbitraryLoadsInWebContent</key>
 		<true/>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
 	</dict>
 	<key>otherExternalDomainYouNeedToCall</key>
 	<dict>
@@ -102,5 +102,7 @@
 	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>CFBundleDisplayName</key>
+	<string>Bespoke</string>
 </dict>
 </plist>

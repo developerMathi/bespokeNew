@@ -31,7 +31,7 @@ namespace BespokeMobile.Views
         ReservationConfigurationVehicleSearch search;
         GetReservationConfigurationResponse vehicleMobileResponse;
         GetReservationConfigurationMobileRequest vehicleMobileRequest;
-
+        private bool isVehicleAvailableOnThoseDays;
 
         public BookNow()
         {
@@ -371,13 +371,15 @@ namespace BespokeMobile.Views
                     });
                 }
                 finally
-                { 
-                    if(vehicleMobileResponse!= null)
+                {
+                    isVehicleAvailableOnThoseDays = false;
+                    if (vehicleMobileResponse != null)
                     {
-                        foreach(ReservationVehicleSearchViewModel rvsv in vehicleMobileResponse.listVehicle)
+                        foreach (ReservationVehicleSearchViewModel rvsv in vehicleMobileResponse.listVehicle)
                         {
                             if (selectedVehicle.VehicleTypeId == rvsv.VehicleTypeId)
                             {
+                                isVehicleAvailableOnThoseDays = true;
                                 reservationView.VehicleTypeID = rvsv.VehicleTypeId;
                                 reservationView.VehicleType = rvsv.VehicleType;
                                 Rates rates = JsonConvert.DeserializeObject<Rates>(JsonConvert.SerializeObject(rvsv.RateDetail));
@@ -393,8 +395,8 @@ namespace BespokeMobile.Views
                             }
                         }
                     }
-                
-                
+
+
                 }
             }
 
@@ -405,7 +407,14 @@ namespace BespokeMobile.Views
 
             //reservationView.TotalDays =(int)((eDate - sDate).TotalDays);
             reservationView.ClientId = Constants.ClientId;
-            await Navigation.PushAsync(new VechicleInformationPage(reservationView,selectedVehicle));
+            if (isVehicleAvailableOnThoseDays)
+            {
+                await Navigation.PushAsync(new VechicleInformationPage(reservationView, selectedVehicle));
+            }
+            else
+            {
+                await PopupNavigation.Instance.PushAsync(new Error_popup("Sorry, Selected vehicle not available on those days, Please select a different vehicle. ", 1));
+            }
         }
 
         private GetReservationConfigurationResponse getVehicleTypesMobileNew(GetReservationConfigurationMobileRequest vehicleMobileRequest, string token)
@@ -450,7 +459,7 @@ namespace BespokeMobile.Views
         //    if ((int)App.Current.Properties["CustomerId"] == 0)
         //    {
 
-        //        loginIcon.IconImageSource = ImageSource.FromResource("BespokeMobile.Assets.logOutTool.png", assembly);
+        //        loginIcon.IconImageSource = ImageSource.FromResource("NativeCamperVans.Assets.logOutTool.png", assembly);
         //        await Navigation.PushAsync(new LoginPage());
 
         //    }
@@ -460,7 +469,7 @@ namespace BespokeMobile.Views
         //        if (logout)
         //        {
         //            App.Current.Properties["CustomerId"] = 0;
-        //            loginIcon.IconImageSource = ImageSource.FromResource("BespokeMobile.Assets.LogInTool.png", assembly);
+        //            loginIcon.IconImageSource = ImageSource.FromResource("NativeCamperVans.Assets.LogInTool.png", assembly);
         //            await Navigation.PushAsync(new WelcomPage());
         //        }
         //    }
