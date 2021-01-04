@@ -29,5 +29,4 @@
         x:Name="AcountPage"
         Title="Contact Us"
         Icon="{local:EmbeddedImage ResourceId=BespokeMobile.Assets.iconRedHelp.png}" />
-    <views:LogoutPage Title="Logout" Icon="{local:EmbeddedImage ResourceId=BespokeMobile.Assets.iconLogout.png}" />
 </TabbedPage>

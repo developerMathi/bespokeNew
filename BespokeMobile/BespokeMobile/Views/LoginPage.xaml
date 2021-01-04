@@ -149,6 +149,8 @@
                             </Image>
 
                             <renders:CustomEntry
+                                 TextColor="Black"
+                                BackgroundColor="Transparent"
                                 x:Name="loginEmailAddress"
                                 Grid.Row="0"
                                 Grid.Column="1"
@@ -265,6 +267,8 @@
                             </Image>
 
                             <renders:CustomEntry
+                                 TextColor="Black"
+                                BackgroundColor="Transparent"
                                 x:Name="loginPassword"
                                 Grid.Column="1"
                                 Margin="10,0,0,0"

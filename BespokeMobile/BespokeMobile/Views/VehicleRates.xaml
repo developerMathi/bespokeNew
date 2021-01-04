@@ -530,6 +530,7 @@
                         </Grid>
 
                         <Frame
+                            BackgroundColor="White"
                             Grid.Row="2"
                             Padding="0"
                             BorderColor="{StaticResource MaxVonBlack}"
@@ -778,7 +779,8 @@
                                     Grid.Row="1"
                                     RowHeight="65"
                                     SeparatorVisibility="None"
-                                    VerticalScrollBarVisibility="Never">
+                                    VerticalScrollBarVisibility="Never"
+                                    BackgroundColor="White">
                                     <ListView.ItemTemplate>
                                         <DataTemplate>
                                             <renders:ExtendedViewCell SelectedBackgroundColor="{StaticResource MaxVonWhite}">
@@ -1573,11 +1575,11 @@
                                         Grid.Row="0"
                                         Grid.Column="0"
                                         Padding="0,0,0,0"
-                                        BackgroundColor="Transparent"
                                         BorderColor="{StaticResource MaxVonBlack}"
                                         CornerRadius="10"
                                         HasShadow="False"
-                                        HeightRequest="55">
+                                        HeightRequest="55"
+                                        BackgroundColor="White">
                                         <Frame.HeightRequest>
                                             <OnPlatform x:TypeArguments="x:Double">
                                                 <On Platform="iOS">
@@ -1615,7 +1617,8 @@
                                                 FontFamily="Roboto-Medium"
                                                 Placeholder="Enter promo code"
                                                 PlaceholderColor="{StaticResource MaxVonBlack}"
-                                                TextColor="{StaticResource MaxVonBlack}">
+                                                TextColor="{StaticResource MaxVonBlack}"
+                                                BackgroundColor="White">
                                                 <renders:CustomEntry.FontSize>
                                                     <OnPlatform x:TypeArguments="x:Double">
                                                         <On Platform="iOS">
@@ -1635,6 +1638,7 @@
                                             </renders:CustomEntry>
 
                                             <Button
+                                                Padding="5,0"
                                                 x:Name="PromoBtn"
                                                 Grid.Row="0"
                                                 Grid.Column="2"
@@ -1713,6 +1717,7 @@
 
 
                                 <ListView
+                                    BackgroundColor="White"
                                     x:Name="taxList"
                                     Grid.Row="5"
                                     RowHeight="65"

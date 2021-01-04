@@ -124,7 +124,6 @@ namespace BespokeMobile.Views
 
                     new HomePageMasterMenuItem { Id = 0,BgColor = Color.Transparent,IconSource=ImageSource.FromResource("BespokeMobile.Assets.iconWhiteDashboard.png"),  Title = "Dashboard" },
                     new HomePageMasterMenuItem { Id = 1,BgColor = Color.Transparent,IconSource=ImageSource.FromResource("BespokeMobile.Assets.iconWhiteCar.png"), Title = "Book Now" },
-                    new HomePageMasterMenuItem { Id = 2,BgColor = Color.Transparent,IconSource=ImageSource.FromResource("BespokeMobile.Assets.iconWhiteRental.png"), Title = "My Rentals " },
                     new HomePageMasterMenuItem { Id = 4,BgColor = Color.Transparent,IconSource=ImageSource.FromResource("BespokeMobile.Assets.iconWhiteUser.png"), Title = "My Profile" },
                     new HomePageMasterMenuItem { Id = 3,BgColor = Color.Transparent,IconSource=ImageSource.FromResource("BespokeMobile.Assets.iconWhiteHelp.png"), Title = "Help" },
                     new HomePageMasterMenuItem { Id = 5,BgColor = Color.Transparent,IconSource=ImageSource.FromResource("BespokeMobile.Assets.iconWhiteLogout.png"), Title = "Log out" },

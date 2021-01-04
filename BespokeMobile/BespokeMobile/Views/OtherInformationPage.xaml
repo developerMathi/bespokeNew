@@ -418,6 +418,8 @@
                                                 </Image.WidthRequest>
                                             </Image>
                                             <renders:CustomEntry
+                                                BackgroundColor="Transparent"
+                                                TextColor="Black"
                                                 x:Name="licenceNumber"
                                                 Grid.Column="1"
                                                 Margin="10,0,0,0"
@@ -426,8 +428,7 @@
                                                 FontSize="Medium"
                                                 Keyboard="Email"
                                                 Placeholder="License Number"
-                                                PlaceholderColor="{StaticResource MaxVonBlack}"
-                                                TextColor="{StaticResource MaxVonBlack}" />
+                                                PlaceholderColor="{StaticResource MaxVonBlack}" />
                                         </Grid>
 
                                     </Frame>
@@ -554,6 +555,7 @@
                                                 </Image.GestureRecognizers>
                                             </Image>
                                             <Label
+                                                TextColor="Black"
                                                 FontFamily="Roboto-Bold"
                                                 FontSize="Small"
                                                 HorizontalOptions="Center"
@@ -581,6 +583,7 @@
                                                 </Image.GestureRecognizers>
                                             </Image>
                                             <Label
+                                                TextColor="Black"
                                                 FontFamily="Roboto-Bold"
                                                 FontSize="Small"
                                                 HorizontalOptions="Center"

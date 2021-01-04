@@ -22,24 +22,27 @@ namespace BespokeMobile.iOS
         {
             base.OnElementChanged(e);
 
-            Control.Layer.BorderWidth = 0;
-            Control.BorderStyle = UITextBorderStyle.None;
-
-            var element = e.NewElement as BorderlessDatePicker;
-            if (!string.IsNullOrWhiteSpace(element.Placeholder))
+            if(Control!= null)
             {
-                Control.Text = element.Placeholder;
-            }
+                Control.Layer.BorderWidth = 0;
+                Control.BorderStyle = UITextBorderStyle.None;
 
-            Control.ShouldEndEditing += (textField) => {
-                var seletedDate = (UITextField)textField;
-                var text = seletedDate.Text;
-                if (text == element.Placeholder)
+                var element = e.NewElement as BorderlessDatePicker;
+                if (!string.IsNullOrWhiteSpace(element.Placeholder))
                 {
-                    Control.Text = DateTime.Now.ToString("dd/MM/yyyy");
+                    Control.Text = element.Placeholder;
                 }
-                return true;
-            };
+
+                Control.ShouldEndEditing += (textField) => {
+                    var seletedDate = (UITextField)textField;
+                    var text = seletedDate.Text;
+                    if (text == element.Placeholder)
+                    {
+                        Control.Text = DateTime.Now.ToString("dd/MM/yyyy");
+                    }
+                    return true;
+                };
+            }
         }
     }
 }

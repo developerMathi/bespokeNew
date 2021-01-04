@@ -371,6 +371,8 @@
                                     </Image>
 
                                     <renders:CustomEntry
+                                         TextColor="Black"
+                                        BackgroundColor="Transparent"
                                         x:Name="emailEntry"
                                         Grid.Column="1"
                                         Margin="10,0,0,0"
@@ -506,6 +508,8 @@
                                     </Image>
 
                                     <renders:CustomEntry
+                                        TextColor="Black"
+                                        BackgroundColor="Transparent"
                                         x:Name="PasswordEntry"
                                         Grid.Column="1"
                                         Margin="10,0,0,0"
@@ -621,6 +625,8 @@
                                     </Image>
 
                                     <renders:CustomEntry
+                                         TextColor="Black"
+                                        BackgroundColor="Transparent"
                                         x:Name="ConfirmPasswordEntry"
                                         Grid.Column="1"
                                         Margin="10,0,0,0"

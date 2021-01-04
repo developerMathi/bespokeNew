@@ -156,15 +156,23 @@ namespace BespokeMobile.Views
 
 
                             NoOfDays.Text = agreement.AgreementDetail.TotalDays.ToString();
-                            TotalRentalFee.Text = "$" + ((decimal)agreement.AgreementTotal.BaseCharge).ToString("0.##");
-                            Discount.Text = "$" + ((decimal)agreement.AgreementDetail.TotalDiscount).ToString("0.##");
-                            TotalMisCharge.Text = "$" + ((decimal)(agreement.AgreementTotal.TotalMiscCharge+ agreement.AgreementTotal.TotalMischargeWithOutTax)).ToString("0.##");
-                            TotalTaxCharge.Text = "$" + ((decimal)agreement.AgreementTotal.TotalTax).ToString("0.##");
-                            GrandTotal.Text = "$" + ((decimal)agreement.AgreementTotal.TotalAmount).ToString("0.##");
-                            AdvancePaid.Text = "$" + ((decimal)agreement.AgreementTotal.AmountPaid).ToString("0.##");
-                            BalanceDue.Text = "$" + ((decimal)agreement.AgreementTotal.BalanceDue).ToString("0.##");
+                            TotalRentalFee.Text = "$" + ((decimal)agreement.AgreementTotal.BaseCharge).ToString("0.00");
+                            Discount.Text = "$" + ((decimal)agreement.AgreementDetail.TotalDiscount).ToString("0.00");
+                            if (agreement.AgreementTotal.TotalMischargeWithOutTax != null)
+                            {
+                                TotalMisCharge.Text = "$" + ((decimal)(agreement.AgreementTotal.TotalMiscCharge + agreement.AgreementTotal.TotalMischargeWithOutTax)).ToString("0.00");
+                            }
+                            else
+                            {
+                                TotalMisCharge.Text = "$" + ((decimal)(agreement.AgreementTotal.TotalMiscCharge)).ToString("0.00");
+                            }
 
-                            if(agreement.AgreementDetail.Status == (int)AgreementStatusConst.Open)
+                            TotalTaxCharge.Text = "$" + ((decimal)agreement.AgreementTotal.TotalTax).ToString("0.00");
+                            GrandTotal.Text = "$" + ((decimal)agreement.AgreementTotal.TotalAmount).ToString("0.00");
+                            AdvancePaid.Text = "$" + ((decimal)agreement.AgreementTotal.AmountPaid).ToString("0.00");
+                            BalanceDue.Text = "$" + ((decimal)agreement.AgreementTotal.BalanceDue).ToString("0.00");
+
+                            if (agreement.AgreementDetail.Status == (int)AgreementStatusConst.Open)
                             {
                                 ExtendBtn.IsVisible = true;
                             }
@@ -265,7 +273,7 @@ namespace BespokeMobile.Views
 
         private void VechileBtn_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new DamageCheckListCheckOut(agreementId, AgreementByAgreementIdMobileResponse.custAgreement.AgreementDetail.AgreementNumber, (int)AgreementByAgreementIdMobileResponse.custAgreement.AgreementDetail.Status,vehicleId));
+            Navigation.PushAsync(new DamageCheckListCheckOut(agreementId, AgreementByAgreementIdMobileResponse.custAgreement.AgreementDetail.AgreementNumber, (int)AgreementByAgreementIdMobileResponse.custAgreement.AgreementDetail.Status, vehicleId));
             //Navigation.PushAsync(new DamageCheckListCheckOut(agreementId, AgreementByAgreementIdMobileResponse.custAgreement.AgreementDetail.AgreementNumber, 2,vehicleId));
         }
 
@@ -392,7 +400,7 @@ namespace BespokeMobile.Views
             }
             return response;
         }
-     
+
 
         private void ExtendBtn_Clicked(object sender, EventArgs e)
         {
@@ -408,6 +416,6 @@ namespace BespokeMobile.Views
             MessagingCenter.Unsubscribe<FilterPopup>(this, "agreementUpdated");
         }
 
-       
+
     }
 }

@@ -20,13 +20,15 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <StackLayout Margin="0" Padding="0">
+        <StackLayout Margin="0" Padding="0"
+                     Grid.Row="0">
             <Image
                 x:Name="vehileTypeImage"
                 Aspect="AspectFit"
                 HorizontalOptions="FillAndExpand"
                 Source="{local:EmbeddedImage ResourceId=BespokeMobile.Assets.iconSilverCar.png}"
-                VerticalOptions="FillAndExpand" />
+                VerticalOptions="FillAndExpand"
+                HeightRequest="150"/>
         </StackLayout>
 
 
@@ -578,7 +580,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="55" />
                         <RowDefinition Height="55" />
-                        <RowDefinition Height="60" />
+                        <RowDefinition Height="0" />
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="60" />
                         <RowDefinition Height="30" />
@@ -729,6 +731,7 @@
 
                     <!--  Row 3  -->
                     <Label
+                        IsVisible="false"
                         Grid.Row="2"
                         Grid.Column="0"
                         Grid.ColumnSpan="2"
@@ -864,6 +867,7 @@
                         Grid.ColumnSpan="2"
                         HeightRequest="1"
                         VerticalOptions="EndAndExpand"
+                        IsVisible="false"
                         Color="{StaticResource MaxVonGray}" />
 
                     <Grid

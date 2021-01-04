@@ -530,14 +530,15 @@
                                     </Image>
 
                                     <renders:CustomEntry
+                                        BackgroundColor="Transparent"
+                                        TextColor="Black"
                                         x:Name="FirstNameEntry"
                                         Grid.Column="1"
                                         Margin="10,0,0,0"
                                         FontFamily="Roboto-Medium"
                                         FontSize="Medium"
                                         Placeholder="First Name"
-                                        PlaceholderColor="{StaticResource MaxVonBlack}"
-                                        TextColor="{StaticResource MaxVonBlack}" />
+                                        PlaceholderColor="{StaticResource MaxVonBlack}" />
 
                                 </Grid>
                             </Frame>
@@ -613,6 +614,8 @@
                                     </Image>
 
                                     <renders:CustomEntry
+                                         BackgroundColor="Transparent"
+                                        TextColor="Black"
                                         x:Name="LastNameEntry"
                                         Grid.Column="1"
                                         Margin="10,0,0,0"
@@ -620,8 +623,7 @@
                                         FontSize="Medium"
                                         Keyboard="Email"
                                         Placeholder="Last Name"
-                                        PlaceholderColor="{StaticResource MaxVonBlack}"
-                                        TextColor="{StaticResource MaxVonBlack}" />
+                                        PlaceholderColor="{StaticResource MaxVonBlack}" />
                                 </Grid>
                             </Frame>
 
@@ -695,6 +697,8 @@
                                         </Image.WidthRequest>
                                     </Image>
                                     <renders:CustomEntry
+                                         BackgroundColor="Transparent"
+                                        TextColor="Black"
                                         x:Name="ContactNoEntry"
                                         Grid.Column="1"
                                         Margin="10,0,0,0"
@@ -702,8 +706,7 @@
                                         FontSize="Medium"
                                         Keyboard="Telephone"
                                         Placeholder="Contact Number"
-                                        PlaceholderColor="{StaticResource MaxVonBlack}"
-                                        TextColor="{StaticResource MaxVonBlack}" />
+                                        PlaceholderColor="{StaticResource MaxVonBlack}" />
                                 </Grid>
 
                             </Frame>
@@ -779,14 +782,15 @@
                                     </Image>
 
                                     <renders:BorderlessDatePicker
+                                         BackgroundColor="Transparent"
+                                        TextColor="Black"
                                         x:Name="DateOfBithEntry"
                                         Grid.Column="1"
                                         Margin="10,0,0,0"
                                         Focused="DateOfBithEntry_Focused"
                                         FontFamily="Roboto-Medium"
                                         FontSize="Medium"
-                                        Placeholder="Date Of Birth"
-                                        TextColor="{StaticResource MaxVonBlack}" />
+                                        Placeholder="Date Of Birth" />
 
                                     <ImageButton
                                         Grid.Column="2"
@@ -901,14 +905,15 @@
                                     </Image>
 
                                     <renders:CustomEntry
+                                         BackgroundColor="Transparent"
+                                        TextColor="Black"
                                         x:Name="AddressEntry"
                                         Grid.Column="1"
                                         Margin="10,0,0,0"
                                         FontFamily="Roboto-Medium"
                                         FontSize="Medium"
                                         Placeholder="Address"
-                                        PlaceholderColor="{StaticResource MaxVonBlack}"
-                                        TextColor="{StaticResource MaxVonBlack}" />
+                                        PlaceholderColor="{StaticResource MaxVonBlack}" />
                                 </Grid>
                             </Frame>
 
@@ -982,14 +987,15 @@
                                         </Image.WidthRequest>
                                     </Image>
                                     <renders:CustomEntry
+                                         BackgroundColor="Transparent"
+                                        TextColor="Black"
                                         x:Name="CityEntry"
                                         Grid.Column="1"
                                         Margin="10,0,0,0"
                                         FontFamily="Roboto-Medium"
                                         FontSize="Medium"
                                         Placeholder="City"
-                                        PlaceholderColor="{StaticResource MaxVonBlack}"
-                                        TextColor="{StaticResource MaxVonBlack}" />
+                                        PlaceholderColor="{StaticResource MaxVonBlack}" />
                                 </Grid>
                             </Frame>
 
@@ -1148,6 +1154,7 @@
                                     </Image>
 
                                     <renders:BorderlessPicker
+                                        BackgroundColor="Transparent"
                                         x:Name="statePicker"
                                         Title="State/Province"
                                         Grid.Column="1"
@@ -1230,6 +1237,7 @@
                                     </Image>
 
                                     <renders:CustomEntry
+                                        BackgroundColor="Transparent"
                                         x:Name="PostalCodeEntry"
                                         Grid.Column="1"
                                         Margin="10,0,0,0"
@@ -1237,7 +1245,7 @@
                                         FontSize="Medium"
                                         Placeholder="Zip/Postal Code"
                                         PlaceholderColor="{StaticResource MaxVonBlack}"
-                                        TextColor="{StaticResource MaxVonBlack}" />
+                                        TextColor="Black" />
                                 </Grid>
 
                             </Frame>

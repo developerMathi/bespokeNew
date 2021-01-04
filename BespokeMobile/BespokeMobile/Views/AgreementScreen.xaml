@@ -1305,7 +1305,7 @@
                             Margin="0,0,15,0"
                             FontFamily="Roboto-Medium"
                             HorizontalTextAlignment="End"
-                            Text="$0"
+                            Text="$0.00"
                             TextColor="{StaticResource MaxVonBlack}">
                             <Label.FontSize>
                                 <OnPlatform x:TypeArguments="x:Double">
@@ -1355,7 +1355,7 @@
                             Margin="0,0,15,0"
                             FontFamily="Roboto-Medium"
                             HorizontalTextAlignment="End"
-                            Text="$0"
+                            Text="$0.00"
                             TextColor="{StaticResource MaxVonBlack}">
                             <Label.FontSize>
                                 <OnPlatform x:TypeArguments="x:Double">
@@ -1405,7 +1405,7 @@
                             Margin="0,0,15,0"
                             FontFamily="Roboto-Medium"
                             HorizontalTextAlignment="End"
-                            Text="$0"
+                            Text="$0.00"
                             TextColor="{StaticResource MaxVonBlack}">
                             <Label.FontSize>
                                 <OnPlatform x:TypeArguments="x:Double">

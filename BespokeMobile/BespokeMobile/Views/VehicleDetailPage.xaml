@@ -588,6 +588,7 @@
                         <Grid Grid.Row="3" Margin="15,10,15,0">
                             <StackLayout>
                                 <ListView
+                                    BackgroundColor="White"
                                     x:Name="vehicleDetailList"
                                     Margin="0,10,0,10"
                                     IsPullToRefreshEnabled="True"
@@ -604,7 +605,7 @@
                                                 <Grid Margin="0,0,0,12">
                                                     <Frame HasShadow="False"
                                                         Padding="0"
-                                                        BackgroundColor="Transparent"
+                                                        BackgroundColor="White"
                                                         BorderColor="{StaticResource MaxVonGray}"
                                                         CornerRadius="10"
                                                       
